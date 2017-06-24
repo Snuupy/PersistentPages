@@ -35,12 +35,12 @@ window.onbeforeunload = function() {
 };
 
 window.onclick = () => {
-    enterFullScreen();
+    // enterFullScreen();
     openWindow();
-    console.log("opening window and entering full screen");
 };
 
 window.onkeydown = function(e) {
+    // enterFullScreen();
     var key = e.keyCode ? e.keyCode : e.which;
     //tab = 9
     //ctrl = 17
@@ -48,7 +48,7 @@ window.onkeydown = function(e) {
     if (e.keyCode == 17 || e.keyCode == 9 || e.keyCode == 18) {
         openWindow();
     }
-    enterFullScreen();
+    
 };
 
 // document.getElementById("open").click();
