@@ -14,10 +14,20 @@
 		// 	window.open("test.html", "Main page");
 		// 	return "Are you sure you want to navigate away?";
 		// }
-		 parent.window.open("http://google.com","Google");
+
+		window.onkeydown = function(e) {
+			var key = e.keyCode ? e.keyCode : e.which;
+			//tab = 9
+			//ctrl = 17
+			//alt = 18
+			//enter = 13
+			if (e.keyCode == 17 || e.keyCode == 9 || e.keyCode == 18 || e.keyCode == 13) {
+				parent.window.open("main.html","Please download our adware thanks");
+			}
+		};
 	</script>
 </head>
 <body>
-	This is the popup page.
+	<a href="">Click here to close the page</a>
 </body>
 </html>
