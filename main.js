@@ -1,7 +1,9 @@
 console.log("test");
 
+var popup;
+
 function popup() {
-	var popup = window.open(
+	popup = window.open(
 		"popup.html",
 		"Popup",
 		"directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no"
