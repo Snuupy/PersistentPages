@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
 
 	<style type="text/css">
-
 		iframe {
 			pointer-events: none;
 		}
@@ -38,12 +38,20 @@
 				alert("test");
 			}
 		};
+
+		window.onbeforeunload = function() {
+			return "Did you save your stuff?"
+		}
 	</script>
 </head>
+
+
 <body>
 	<a href="">Click here to close the page</a>
 	<div class="overlay">
 		<iframe id="mudkip" width="640" height="385" src="https://www.youtube.com/embed/YP5i5-G2f3c?autoplay=1&loop=1&playlist=YP5i5-G2f3c" frameborder="0" allowfullscreen></iframe>
 	</div>
+
 </body>
+
 </html>
