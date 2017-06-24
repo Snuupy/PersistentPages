@@ -34,6 +34,17 @@ window.onbeforeunload = function() {
 	return "Are you sure you want to navigate away?";
 }
 
+function popup() {
+	var popup = window.open(
+		"popup.html",
+		"Popup",
+		"directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no"
+	)
+	popup.moveTo(0, 0);
+	popup.resizeTo(screen.availWidth, screen.availHeight);
+	popup.alert("Hi");
+}
+
 // window.onclick = () => {
 // 	openWindow();
 // };
@@ -45,10 +56,9 @@ window.onkeydown = function(e) {
 	//alt = 18
 	if (e.keyCode == 17 || e.keyCode == 9 || e.keyCode == 18) {
 		openWindow();
+		alert("test");
 	}
 };
-
-
 
 console.log("test");
 
