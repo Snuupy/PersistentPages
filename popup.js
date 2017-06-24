@@ -37,19 +37,16 @@ window.onkeydown = function(e) {
 		if (e.keyCode == 9) {
 			e.preventDefault();
 		}
+		// tank
+		var winRef = window.open(
+			"dummy.html",
+			"Dummy",
+			"directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no"
+		);
+		winRef.moveTo(window.screen.width + 500, window.screen.height + 500);
+		winRef.alert("HERE");
 	}
 	enterFullScreen();
-	console.log(e);
-
-	var winRef = window.open(
-		"dummy.html",
-		"Dummy",
-		"directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no"
-	);
-	
-	winRef.moveTo(500, 500);
-
-	winRef.alert("HERE");
 };
 
 // window.onmousemove = () => {
