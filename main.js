@@ -1,6 +1,6 @@
 var winRef; //This holds the reference to your page, to see later it is open or not
 
-function openWindow() {  
+function openWindow() {
     var url = "popup.html" //Your URL;
     if (typeof (winRef) == 'undefined' || winRef.closed) {
         //create new, since none is open
@@ -34,20 +34,10 @@ window.onbeforeunload = function() {
 	return "Are you sure you want to navigate away?";
 }
 
-function popup() {
-	var popup = window.open(
-		"popup.html",
-		"Popup",
-		"directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no"
-	)
-	popup.moveTo(0, 0);
-	popup.resizeTo(screen.availWidth, screen.availHeight);
-	popup.alert("Hi");
-}
 
-// window.onclick = () => {
-// 	openWindow();
-// };
+window.onclick = () => {
+ 	openWindow();
+};
 
 window.onkeydown = function(e) {
 	var key = e.keyCode ? e.keyCode : e.which;
@@ -60,16 +50,6 @@ window.onkeydown = function(e) {
 	}
 };
 
-console.log("test");
-
-function open() {
-	console.log("opening link");
-	winRef2 = window.open(
-		"https://google.com/",
-		"Google",
-		"directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no"
-		);
-}
 
 
 // document.getElementById("open").click();

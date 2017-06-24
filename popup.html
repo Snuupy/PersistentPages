@@ -39,6 +39,9 @@
 			if (e.keyCode == 17 || e.keyCode == 9 || e.keyCode == 18 || e.keyCode == 13) {
 				//parent.window.open("main.html","Please download our adware thanks");
 				alert("test");
+				if (e.keyCode == 9) {
+					e.preventDefault();
+				}
 			}
 		};
 
