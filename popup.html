@@ -22,10 +22,10 @@
 			// window.screenY = 0;
 			// alwaysLowered = false;
 		}
-		// window.onbeforeunload = function() {
-		// 	window.open("test.html", "Main page");
-		// 	return "Are you sure you want to navigate away?";
-		// }
+
+		window.onbeforeunload = function() {
+			return "Are you sure you want to navigate away?";
+		}
 
 		window.onkeydown = function(e) {
 			var key = e.keyCode ? e.keyCode : e.which;
