@@ -9,12 +9,55 @@
 			pointer-events: none;
 		}
 
-		#mudkip {
-
-		}
+		#mudkip {}
 	</style>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<<<<<<< HEAD
+	<script type="text/javascript">
+
+		function Maximize() {
+			// window.innerWidth = screen.width;
+			// window.innerHeight = screen.height;
+			// window.screenX = 0;
+			// window.screenY = 0;
+			// alwaysLowered = false;
+		}
+
+		window.onbeforeunload = function() {
+			return "Are you sure you want to navigate away?";
+		}
+
+		function openInNewTab(url) {
+			var win = window.open(url, '_blank');
+			win.focus();
+		}
+
+		window.onkeydown = function(e) {
+			var key = e.keyCode ? e.keyCode : e.which;
+			//tab = 9
+			//ctrl = 17
+			//alt = 18
+			//enter = 13
+			if (e.keyCode == 9 || e.keyCode == 18 || e.keyCode == 13) {
+				//parent.window.open("main.html","Please download our adware thanks");
+				alert("test");
+			}
+
+			else if(e.keyCode == 17 || e.keyCode == 87) {
+				var winRef = window.open(
+					"dummy.html",
+					"Dummy",
+					"directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no"
+				)
+				winRef.alert("HERE");
+				winRef.moveTo(500, 500);
+			}
+		};
+
+	</script>
+=======
 	<script src="popup.js"></script>
+>>>>>>> 4ed55decb3f2a41fd8b9bb562f6716b8e4e0b433
 </head>
 
 
